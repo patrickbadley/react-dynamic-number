@@ -23,8 +23,8 @@ class DynamicNumberComponent extends React.Component {
       }
     },
     thousand: (props, propName) => {
-      if(props[propName] !== undefined && props[propName] !== true && props[propName] !== false && props[propName] !== ' ') {
-        return new Error('thousand have to be bool value or space character');
+      if(props[propName] !== undefined && props[propName] !== true && props[propName] !== false && props[propName] !== ' ' && props[propName] !== '.') {
+        return new Error('thousand have to be bool value, space character, or dot char');
       }
     }
   }
